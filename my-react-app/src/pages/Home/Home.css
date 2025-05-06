@@ -10,8 +10,8 @@
     font-weight: bold;
     color: blueviolet;
     background-color: rgba(87, 81, 81, 0.2);
-    padding: 15px 20px; /* Adds spacing inside */
-    border-radius: 12px; /* Soft rounded corners */
+    padding: 15px 20px; 
+    border-radius: 12px; 
     display: inline-block;
 }
 .JoinNow{
