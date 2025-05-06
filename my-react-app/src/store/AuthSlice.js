@@ -3,8 +3,8 @@ import { db } from "../FireBaseConfig";
 import { collection, getDocs} from "firebase/firestore";
 
 const initialState = {
-  user: JSON.parse(localStorage.getItem("user")) || null,
-  token: localStorage.getItem("token") || null,
+  user: JSON.parse(sessionStorage.getItem("user")) || null,
+  token: sessionStorage.getItem("token") || null,
   info:[],
 };
 export const fetchInfo = createAsyncThunk("posts/fetchInfo", async () => {
@@ -19,15 +19,14 @@ const authSlice = createSlice({
     loginSuccess(state, action) {
       state.user = action.payload.user;
       state.token = action.payload.token;
-      localStorage.setItem("user", JSON.stringify(action.payload.user));
-      localStorage.setItem("token", action.payload.token);
+      sessionStorage.setItem("user", JSON.stringify(action.payload.user));
+      sessionStorage.setItem("token", action.payload.token);
     },
     logout(state) {
       state.user = null;
       state.token = null;
       state.info=null;
-      localStorage.removeItem("user");
-      localStorage.removeItem("token");
+      sessionStorage.clear();
     },
   },
   extraReducers:(builder)=>{
