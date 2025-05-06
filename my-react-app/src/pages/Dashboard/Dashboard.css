@@ -20,10 +20,20 @@ p{
     width: 100%;
     justify-items: center;
 }
-.post{
+.post {
+    width: 15rem; 
     padding: 20px; 
     background-color: rgba(87, 81, 81, 0.2);
     border-radius: 12px; 
     margin: 10px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
 }
