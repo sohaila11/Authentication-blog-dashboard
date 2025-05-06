@@ -12,6 +12,7 @@ const Signup = () => {
   const[location,setLocation]=useState("");
   const [about,setAbout]=useState("");
   const[name,setName]=useState("");
+  const[PersonalPhoto,setPersonalPhoto]=useState("")
   const navigate = useNavigate();
 
   const handleSignup = async () => {
@@ -23,6 +24,7 @@ const Signup = () => {
             designation,
             location,
             about,
+            PersonalPhoto
           });}
           alert("Signup successfully!");
           navigate("/login");
@@ -47,9 +49,14 @@ const Signup = () => {
         onChange={(e) => setDesignation(e.target.value)}
       />
       <input 
-      placeholder="location"
+      placeholder="Location"
       type="text"
       onChange={(e)=>setLocation(e.target.value)}
+      />
+      <input
+      placeholder="Personal photo"
+      type="text"
+      onChange={(e)=>setPersonalPhoto(e.target.value)}
       />
       <textarea className="tarea"
         placeholder="Content"
