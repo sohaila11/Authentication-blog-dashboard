@@ -31,29 +31,3 @@ function App() {
   );
 }
 export default App;
-/*const router = createBrowserRouter([
-  {
-    path:'/',
-    element:<div>Home</div>,
-    children:[
-      {path:"login",element:<Login/>},
-      {path: "Signup",element:<Signup/>},
-      {path:"dashboard", element :<ProtectedRoute/>,
-        children:[{index:true ,element:<Dashboard/>}]},
-      {path:"posts",element:<ProtectedRoute/>,
-        children:[{index:true,element:<Posts/>}]},
-      {path:"new-posts",element:<ProtectedRoute/>,
-        children:[{index:true,element:<NewPost/>}]},
-        ]
-      }
-    ])
-
-function App(){
-  return(
-  <>
-  <Navbar/>
-  <RouterProvider router={router}/>
-  </>
-  );
-}
-export default App;*/
